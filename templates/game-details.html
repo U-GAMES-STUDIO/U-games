@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Warriors - Szczegóły Gry</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/game-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-inner"></div>
+    <div class="progress-bar"></div>
+
+    <nav>
+        <div class="logo">GameStudio</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Powrót</a></li>
+            <li><a href="#overview">Przegląd</a></li>
+            <li><a href="#features">Funkcje</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#requirements">Wymagania</a></li>
+        </ul>
+    </nav>
+
+    <header class="game-hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="game-trailer.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Cyber Warriors</h1>
+            <div class="game-meta" data-aos="fade-up" data-aos-delay="200">
+                <span>Action RPG</span>
+                <span>Multiplayer</span>
+                <span>Sci-Fi</span>
+            </div>
+            <button class="cta-button" data-aos="fade-up" data-aos-delay="400">Kup Teraz</button>
+        </div>
+    </header>
+
+    <section id="overview" class="game-section">
+        <div class="container">
+            <h2 data-aos="fade-right">Przegląd Gry</h2>
+            <div class="game-overview">
+                <div class="overview-text" data-aos="fade-right">
+                    <p>Cyber Warriors to futurystyczna gra akcji RPG osadzona w roku 2187. Wciel się w rolę elitarnego najemnika w świecie zdominowanym przez megakorporacje i zaawansowaną technologię.</p>
+                    <ul class="feature-list">
+                        <li>Rozbudowany system rozwoju postaci</li>
+                        <li>Dynamiczna walka z elementami parkour</li>
+                        <li>Otwarty świat z wieloma frakcjami</li>
+                        <li>Tryb współpracy do 4 graczy</li>
+                    </ul>
+                </div>
+                <div class="overview-stats" data-aos="fade-left">
+                    <div class="stat-item">
+                        <span class="stat-value">98%</span>
+                        <span class="stat-label">Pozytywnych recenzji</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">100+</span>
+                        <span class="stat-label">Godzin rozgrywki</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">4K</span>
+                        <span class="stat-label">Ultra HD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="game-section dark">
+        <div class="container">
+            <h2 data-aos="fade-down">Kluczowe Funkcje</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <i class="feature-icon">🎮</i>
+                    <h3>System Walki</h3>
+                    <p>Zaawansowany system walki łączący elementy sztuk walki z cyberwszczepami</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in">
+                    <i class="feature-icon">🌍</i>
+                    <h3>Otwarty Świat</h3>
+                    <p>5 unikalnych dzielnic miasta do eksploracji</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in">
+                    <i class="feature-icon">🔧</i>
+                    <h3>Customizacja</h3>
+                    <p>Setki modyfikacji postaci i broni</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="game-section">
+        <div class="container">
+            <h2 data-aos="fade-down">Galeria</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="screenshot1.jpg" alt="Screenshot 1">
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="screenshot2.jpg" alt="Screenshot 2">
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="screenshot3.jpg" alt="Screenshot 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="requirements" class="game-section dark">
+        <div class="container">
+            <h2 data-aos="fade-down">Wymagania Systemowe</h2>
+            <div class="requirements-grid">
+                <div class="req-column" data-aos="fade-right">
+                    <h3>Minimalne</h3>
+                    <ul>
+                        <li>System: Windows 10 64-bit</li>
+                        <li>Procesor: Intel Core i5-8400</li>
+                        <li>RAM: 8 GB</li>
+                        <li>Grafika: NVIDIA GTX 1060 6GB</li>
+                        <li>DirectX: Wersja 12</li>
+                        <li>Miejsce na dysku: 100 GB</li>
+                    </ul>
+                </div>
+                <div class="req-column" data-aos="fade-left">
+                    <h3>Zalecane</h3>
+                    <ul>
+                        <li>System: Windows 10/11 64-bit</li>
+                        <li>Procesor: Intel Core i7-10700K</li>
+                        <li>RAM: 16 GB</li>
+                        <li>Grafika: NVIDIA RTX 3070</li>
+                        <li>DirectX: Wersja 12</li>
+                        <li>Miejsce na dysku: 100 GB SSD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="../static/scripts.js"></script>
+</body>
+</html>

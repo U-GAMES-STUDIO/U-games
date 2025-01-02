@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStudio - Twórcy Gier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-inner"></div>
+    <div class="loader"></div>
+    <div class="progress-bar"></div>
+    <nav>
+        <div class="logo">U-Games Studio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#games">Wydane Gry</a></li>
+            <li><a href="#team">Zespół</a></li>
+            <li><a href="#discord">Discord</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="login">Zaloguj się</a></li> 
+            <li><a href="register">Zarejestruj się</a></li> 
+        </ul>
+    </nav>
+    
+    <header class="header-new" id="home">
+        <div class="header-content">
+            <div class="header-text" data-aos="fade-right">
+                <h1>Kreujemy Cyfrowe Światy</h1>
+                <p>Tworzymy innowacyjne gry, które przekraczają granice wyobraźni. Dołącz do nas w podróży przez niezwykłe światy gamingu.</p>
+                <button class="cta-button"><a href="#games">Poznaj Nasze Gry</a></button>
+            </div>
+            <div class="header-image" data-aos="fade-left">
+                <div class="floating-elements">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
+                    <div class="floating-element element-3"></div>
+                </div>
+                <img width="196" height="196" src="https://img.icons8.com/nolan/96/nintendo-switch-pro-controller.png" alt="nintendo-switch-pro-controller"/>
+            </div>
+        </div>
+    </header>
+
+    <section id="games" class="games-section">
+        <h2 data-aos="fade-down">Nasze Gry</h2>
+        <div class="games-grid">
+            <div class="game-card" data-aos="zoom-in">
+                <div class="game-image">
+                <!---  <img src="{{ url_for('static', filename='game1.jpg') }}" alt="Game 1"> --->  
+                </div>
+                <div class="game-info">
+                    <h3>Cyber Warriors</h3>
+                    <p>Dynamiczna gra akcji w świecie cyberpunk</p>
+                    <button class="game-btn"><a href="{{ url_for('game_details') }}">Zobacz szczegóły gry</a></button>
+                </div>
+            </div>
+            <div class="game-card" data-aos="zoom-in">
+                <div class="game-image">
+                 <!-- <img src="{{ url_for('static', filename='game2.jpg') }}" alt="Game 2"> --->  
+                </div>
+                <div class="game-info">
+                    <h3>Space Odyssey</h3>
+                    <p>Kosmiczna przygoda w odległej galaktyce</p>
+                    <button class="game-btn">Zobacz więcej</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 data-aos="fade-down">Nasz Zespół</h2>
+        <p>Nasz projekt rozpoczął się od pomysłu dwóch znajomych, którzy postanowili połączyć swoje pasje i umiejętności, aby stworzyć gry najwyższej jakości w przystępnej cenie.
+         Skupiamy się na dostarczaniu graczom wyjątkowych tytułów, które oferują emocjonującą zabawę, innowacyjne rozwiązania i angażującą rozgrywkę. Naszym celem jest, 
+        aby nasze produkcje były dostępne dla jak najszerszej grupy odbiorców, oferując rozrywkę na najwyższym poziomie, niezależnie od budżetu graczy. 
+        Praca nad tym projektem to dla nas połączenie pasji i ambicji, by dostarczać gry, które cieszą i angażują graczy, niezależnie od ich możliwości finansowych..</p>
+        <div class="team-grid">
+            <div class="team-member" data-aos="flip-left">
+                <img src="{{ url_for('static', filename='images/person1.jpg') }}" alt="1">
+                <h3>Tomasz AKA Gawronek</h3>
+                <p>Założyciel</p>
+                <p>Cześć! Nazywam się Tomek i dopiero zaczynam swoją przygodę z programowaniem. Mimo że jestem na początku tej drogi, jestem pełen pasji i zaangażowania w rozwój moich umiejętności...</p>
+            </div>
+            <div class="team-member" data-aos="flip-left">
+                <img src="{{ url_for('static', filename='images/person2.jpg') }}" alt="Lead Developer">
+                <h3>Mateusz AKA m4t3k_33</h3>
+                <p>Założyciel/Developer strony</p>
+                <p>Cześć, mam na imię Mateusz i mam 16 lat. Jestem webdeveloperem oraz developerem gier przeglądarkowych...</p>
+            </div>
+            <div class="team-member" data-aos="flip-left">
+                <img src="{{ url_for('static', filename='images/person3.jpg') }}" alt="Art Director">
+                <h3>Paweł AKA Wesiodev</h3>
+                <p>Dev-Backend, Gier / UI-UX Desinger</p>
+                <p>Cześć, jestem Paweł, zajmuję się tworzeniem stron i aplikacji internetowych...</p>
+            </div>
+        </div>
+    </section>
+    <section id="discord">
+        <h2 data-aos="fade-down">Discord Community</h2>
+        <div class="discord-container">
+            <div class="discord-flex">
+                <div class="discord-main custom-widget" data-aos="fade-right">
+                    <iframe src="https://discord.com/widget?id=1323385215783014484&theme=dark" 
+                            width="100%" 
+                            height="500" 
+                            allowtransparency="true" 
+                            frameborder="0">
+                    </iframe>
+                    <a href="https://discord.gg/uXZrSSr5k6" class="discord-join-btn">Dołącz do nas!</a>
+                </div>
+
+                    <div class="discord-mini custom-widget" data-aos="fade-left">
+                        <h3>Nadchodzące Wydarzenia</h3>
+                        <div class="events-list">
+                         <span>Wydanie Gry 22.03.2025r</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2 data-aos="fade-down">Kontakt</h2>
+        <div class="contact-container">
+            <form class="contact-form" data-aos="fade-right">
+                <input type="text" placeholder="Imię i nazwisko">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Wiadomość"></textarea>
+                <button type="submit" class="cta-button">Wyślij</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GameStudio</h3>
+                <p>Tworzymy niezapomniane doświadczenia w świecie gier</p>
+            </div>
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GameStudio. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script>
+        AOS.init({
+            duration: 1100,
+            once: true
+        });
+    </script>
+</body>
+</html>
