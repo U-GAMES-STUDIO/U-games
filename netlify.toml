@@ -1,9 +1,12 @@
 [build]
-  command = "pip install -r requirements.txt"
-  publish = "public"
+  command = "pip install -r requirements.txt && python app.py"
+  functions = "backend"  # Określ funkcje backendowe w tym folderze
+  publish = "/opt/build/repo/functions"  # Może to być po prostu ścieżka do folderu z funkcjami (lub usuń, jeśli nie ma potrzeby)
 
-[[redirects]]
+[build.environment]
+  PYTHON_VERSION = "3.9.7"
+
+[redirects]
   from = "/*"
   to = "/functions/app.py"
   status = 200
- 
